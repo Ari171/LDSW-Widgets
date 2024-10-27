@@ -1,0 +1,43 @@
+import 'package:flutter/material.dart';
+
+class MyWidgetApp extends StatelessWidget {
+  @Override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Mi Aplicación'),
+        ),
+        body: Column(
+          children: [
+            Text('Hola, mundo!'),
+            Row(
+              children: [
+                Container(
+                  color: Colors.blue,
+                  width: 50,
+                  height: 50,
+                ),
+                Text('Este es un texto en una fila'),
+              ],
+            ),
+            Stack(
+              children: [
+                Container(
+                  color: Colors.red,
+                  width: 100,
+                  height: 100,
+                ),
+                Container(
+                  color: Colors.green,
+                  width: 50,
+                  height: 50,
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
